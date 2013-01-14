@@ -1,13 +1,14 @@
-  .nav-bar { height: $navBarHeight; background: $navBarBgColor; margin-left: -35px ; margin-top: $navBarHeight * 2 !important; padding: 0;
+  .nav-bar { height: $navBarHeight; background: $navBarBgColor; margin-left: -35px ; margin-top: $navBarHeight !important; padding: 0;
 
     &>li { color: $navBarTextColor; float: $defaultFloat; display: block; position: relative; padding: 0; margin: 0; line-height: $navBarHeight / 1.1; @include box-shadow(1px 0 0 fade-out($shinyEdge, .3) inset);
 
       &:first-child { @include box-shadow(0 0 0); }
       &:last-child { @include box-shadow(1px 0 0 fade-out($shinyEdge, .3) inset, 1px 0 0 fade-out($shinyEdge, .3)); }
 
-      &.active {
-        &>a { color: $black; cursor: default; background: lighten($black, 90%);}
-        &:hover {color: $black; background: lighten($black, 90%); cursor: default; }
+      &.active { background: transparent none;
+        &>a { font-family: "News Cycle", "Helvetica", Helvetica, Arial, sans-serif; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid $black; color: $secondaryColor;;}
+        &>a:hover { color: $secondaryColor; }
+        &:hover { background: transparent none; }
       }
       &:hover { background: lighten($black, 90%); }
 
@@ -29,7 +30,7 @@
     }
 
     &>li>a:first-child { position: relative; padding: 0 ($navBarHeight / 3) 0 ($navBarHeight / 2); display: block; text-decoration: none; font-size: ms(0); 
-      &.active { border-#{$defaultOpposite}: solid 6px lighten($secondaryColor, 30%); } }
+      &.active {} }
     &>li>input { margin: 0 10px; }
 
     &.vertical { height: auto;
@@ -40,7 +41,7 @@
         .flyout { #{$defaultFloat}: 100%; top: -1px;
           &.right { #{$defaultFloat}: auto; #{$defaultOpposite}: 100%; }
         }
-        &.active {letter-spacing: .08em;}
+        &.active {letter-spacing: .08em; border-right: 0 none;}
         &:last-child { border-bottom: 0 none;}
       }
     }
@@ -70,10 +71,12 @@
   ul.flyout, .nav-bar li ul { padding: 0; list-style: none; background: transparent none; margin-left: 0;
 
     li { border-left: 0 none; line-height: $navBarHeight / 1.1;
-      a { padding: 0; letter-spacing: .08em; background: $white; border: none; border-width: 0; color: #555; display: block; font-size: ms(0); height: auto; line-height: 1;
+      a { line-height: inherit; padding: 0 ($navBarHeight / 3) 0 ($navBarHeight / 2); background: $white; border: none; border-width: 0; color: #555; display: block; font-size: ms(0); height: auto;
         &:hover, &:focus { color: $black; background: lighten($black, 90%); }
       }
-      &.active { margin-top: 0;}
+      &.active { margin-top: 0; border-top: 0 none; border-left: 0 none;
+        a{ background: lighten($black, 90%); color: $black;}
+      }
     }
 
   }

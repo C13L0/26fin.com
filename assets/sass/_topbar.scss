@@ -29,9 +29,9 @@
 
     /* First <ul> for branding, title, name, etc */
     &>ul {
-      .name { padding-bottom: 2; border-bottom: 1px solid white;
+      .name { padding-bottom: 2; border-bottom: 1px solid $white; 
         h1 { line-height: $topBarHeight * 2; margin: 0;
-          a { font-weight: $topBarTitleWeight; padding: 0 $topBarHeight / 5; font-size: $topBarTitleSize !important; }
+          a { font-weight: $topBarTitleWeight; padding: 0 $topBarHeight / 5 !important; font-size: $topBarTitleSize !important; }
         }
         img { margin-top: -5px; vertical-align: middle; }
       }
@@ -42,9 +42,11 @@
     ul:not(.dropdown) {margin-left: 0; display: inline; height: $topBarHeight; line-height: $topBarHeight; list-style: none;
       /* Main Navigation links style */
       &>li { float: left; background: $topBarBgColor;
-        &.name {border-right: $topBarListBorder; border-left: $topBarListBorder;}
+        &.name {border-right: $topBarListBorder; border-left: $topBarListBorder; padding: 5px auto 0;
+          a {padding: $topBarHeight / 8 $topBarHeight / 3 0;}
+        }
         a:not(.button) {margin-bottom: -1px; color: $topBarLinkColor; display: block; font-size: $topBarLinkSize; font-weight: $topBarLinkWeight; height: $topBarHeight; line-height: $topBarHeight; padding: $topBarHeight / 5 $topBarHeight / 3 0; }
-        &:not(.name) {border-right: $topBarListBorder;
+        &:not(.name) {border-right: $topBarListBorder; background: darken($topBarBgColor, 5%);
           &:hover, &.active, &:focus { background: darken($topBarBgColor, 15%);
             a { color: darken($topBarLinkColor, 15%);}
           }
