@@ -6389,7 +6389,7 @@ abbr {
 /* line 49, ../sass/_topbar.scss */
 .top-bar ul:not(.dropdown) > li:not(.name) {
   border-right: 1px solid #cccccc;
-  background: #fafafa;
+  background: #f2f2f2;
 }
 /* line 50, ../sass/_topbar.scss */
 .top-bar ul:not(.dropdown) > li:not(.name):hover, .top-bar ul:not(.dropdown) > li:not(.name).active, .top-bar ul:not(.dropdown) > li:not(.name):focus {
@@ -6953,9 +6953,9 @@ body {
 #wrapper {
   background: white;
   float: left;
-  border-top: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
+  border: 1px solid #cccccc;
   padding: 20px;
   margin-top: -1px;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 40px;
 }

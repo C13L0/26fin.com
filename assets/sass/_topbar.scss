@@ -46,7 +46,7 @@
           a {padding: $topBarHeight / 8 $topBarHeight / 3 0;}
         }
         a:not(.button) {margin-bottom: -1px; color: $topBarLinkColor; display: block; font-size: $topBarLinkSize; font-weight: $topBarLinkWeight; height: $topBarHeight; line-height: $topBarHeight; padding: $topBarHeight / 5 $topBarHeight / 3 0; }
-        &:not(.name) {border-right: $topBarListBorder; background: darken($topBarBgColor, 2%);
+        &:not(.name) {border-right: $topBarListBorder; background: darken($topBarBgColor, 5%);
           &:hover, &.active, &:focus { background: darken($topBarBgColor, 15%);
             a { color: darken($topBarLinkColor, 15%);}
           }
