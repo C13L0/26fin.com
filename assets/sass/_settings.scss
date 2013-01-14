@@ -83,6 +83,10 @@
 // $custDropdownSelectedFontColor: #000;
 // $custFormDisabledBgColor: #ddd;
 
+// Main settings
+   $bodyBkgImage: url(/assets/images/debut_light.png) repeat scroll;
+   $mainBorderRadius: 3px;
+
 // Tab Settings
 
 // $tabHeight: 40px;
@@ -90,22 +94,26 @@
 
 // Nav Bar Settings
 
-// $navBarHeight: 40px;
+   $navBarHeight: 40px;
 // $navFlyoutBaseWidth: 250px;
+   $navBarBgColor: #fff;
+   $navBarTextColor: #666666;
 
 // Top Bar Settings
 
    $topBarBgColor: #fff;
-// $topBarHeight: 45px;
+   $topBarHeight: 70px;
 // $topBarHeightMobile: 45px;
 // $topBarBtmMargin: 30px;
 // $topBarTitleWeight: bold;
 // $topBarTitleSize: 17px;
+   $topBarDropLinkSize: 30px;
+   $topBarListBorder: 1px solid #ccc;
    $topBarLinkColor: #333;
 // $topBarLinkWeight: bold;
 // $topBarLinkSize: 13px;
-   $topBarDropBgColor: #333;
-   $topBarDropLinkColor: #fff;
+   $topBarDropBgColor: #ccc;
+   $topBarDropLinkColor: #333;
 // $topBarDropToggleSize: 5px;
    $topBarDropToggleColor: #333;
    $topBarDropToggleAlpha: .5;

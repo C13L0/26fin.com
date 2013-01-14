@@ -33,7 +33,7 @@ Usage:
         {% if weight == nodeweight %}
           {% if group == null or group == node.group %}
             <li class="{% if page.url == node.url %}active {% endif %} {% if node.dropdown %} has-dropdown{% endif %}">
-            	{% if page.url == node.url %}
+              {% if page.url == node.url %}
             	<a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a>
             	{% else %}
             	<a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a>

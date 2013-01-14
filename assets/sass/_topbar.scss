@@ -16,22 +16,22 @@
   .top-bar-js-breakpoint { width: $topBarBreakPoint !important; visibility: hidden; }
 
   /* Wrapped around .top-bar to contain to grid width */
-  .contain-to-grid { width: 100%; background: $topBarBgColor; }
+  .contain-to-grid { width: 100%; }
 
   /* Wrapped around .top-bar to make it fixed at the top */
   .fixed { width: 100%; left: 0; position: fixed; top: 0; z-index: 99; }
 
   /* <nav> */
-  .top-bar { background: $topBarBgColor; height: $topBarHeight; line-height: $topBarHeight; margin: 0 0 $topBarBtmMargin; padding: 0; width: 100%; position: relative;
+  .top-bar { background: transparent; margin: 0; border-bottom: $topBarListBorder; height: $topBarHeight; line-height: $topBarHeight; padding: 0; width: 100%; position: relative;
 
     /* Contain width to .row width */
     .contain-to-grid & { max-width: $rowWidth; margin: 0 auto; }
 
     /* First <ul> for branding, title, name, etc */
     &>ul {
-      .name {
-        h1 { line-height: $topBarHeight; margin: 0;
-          a { font-weight: $topBarTitleWeight; padding: 0 $topBarHeight / 2; font-size: $topBarTitleSize !important; }
+      .name { padding-bottom: 2; border-bottom: 1px solid white;
+        h1 { line-height: $topBarHeight * 2; margin: 0;
+          a { font-weight: $topBarTitleWeight; padding: 0 $topBarHeight / 5; font-size: $topBarTitleSize !important; }
         }
         img { margin-top: -5px; vertical-align: middle; }
       }
@@ -39,14 +39,14 @@
     &.expanded { height: inherit; }
 
     /* topbar global <ul> styles */
-    ul { margin-left: 0; display: inline; height: $topBarHeight; line-height: $topBarHeight; list-style: none;
-
+    ul:not(.dropdown) {margin-left: 0; display: inline; height: $topBarHeight; line-height: $topBarHeight; list-style: none;
       /* Main Navigation links style */
-      &>li { float: left;
-        a:not(.button) { color: $topBarLinkColor; display: block; font-size: $topBarLinkSize; font-weight: $topBarLinkWeight; height: $topBarHeight; line-height: $topBarHeight; padding: 0 $topBarHeight / 3; }
-        &:not(.name) {
+      &>li { float: left; background: $topBarBgColor;
+        &.name {border-right: $topBarListBorder; border-left: $topBarListBorder;}
+        a:not(.button) {margin-bottom: -1px; color: $topBarLinkColor; display: block; font-size: $topBarLinkSize; font-weight: $topBarLinkWeight; height: $topBarHeight; line-height: $topBarHeight; padding: $topBarHeight / 5 $topBarHeight / 3 0; }
+        &:not(.name) {border-right: $topBarListBorder;
           &:hover, &.active, &:focus { background: darken($topBarBgColor, 15%);
-            a { color: darken($topBarLinkColor, 15%); }
+            a { color: darken($topBarLinkColor, 15%);}
           }
         }
 
@@ -79,17 +79,17 @@
         &.has-dropdown { position: relative;
           &:hover, &:focus { &>.dropdown { display: block; visibility: visible; } }
           a { padding-right: $topBarHeight * .75;
-            &:after { @include cssTriangle($topBarDropToggleSize, $topBarDropToggleColor, top); margin-right: $topBarHeight / 3; margin-top: -$topBarDropToggleSize / 2; position: absolute; right: 0; top: 50%; }
+            &:after { @include cssTriangle($topBarDropToggleSize, $topBarDropToggleColor, top); margin-right: $topBarHeight / 3; margin-top: $topBarHeight / 5; position: absolute; right: 0; top: 50%; }
           }
-          .dropdown { background: $topBarDropBgColor; left: 0; margin: 0; padding: $topBarHeight / 5 0 0 0; position: absolute; visibility: hidden; z-index: 99;
-            li { background: $topBarDropBgColor; line-height: 1; min-width: 100%; padding-bottom: 5px;
-              a { color: $topBarDropLinkColor; font-weight: normal; height: 100%; line-height: 1; padding: 5px $topBarHeight / 3 + 2 5px $topBarHeight / 3; white-space: nowrap;
+          .dropdown { background: white; height: auto; left: 0; padding: 0; margin: 0; position: absolute; visibility: hidden; z-index: 99; border: $topBarListBorder;
+            li { background: white; line-height: $topBarDropLinkSize; min-width: 100%; border-bottom: $topBarListBorder; padding: 0;
+              a { color: $topBarLinkColor; font-weight: normal; height: 100%; line-height: $topBarDropLinkSize; white-space: nowrap;
                 &:after { border: none; }
-                &:hover, &:focus { background: lighten($topBarDropBgColor, 10%); }
+                &:hover, &:focus { background: $mainColor; color: white;}
               }
               label { color: lighten($topBarDropBgColor, 30%); font-size: ms(0) - 4; font-weight: $topBarLinkWeight; margin: 0; padding-left: $topBarHeight / 3; text-transform: uppercase; }
               &.divider { border-top: solid 1px darken($topBarDropBgColor, 20%); @include box-shadow(0 1px 0 rgba(255,255,255,.10) inset); height: 10px; padding: 0; width: 100%; }
-              &:last-child { padding-bottom: 10px; }
+              &:last-child {border-bottom: none;}
               &.active a { background: darken($topBarBgColor, 15%); }
             }
           }
