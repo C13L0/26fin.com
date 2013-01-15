@@ -1,1 +1,12 @@
-<base href="{{ site.url }}">
+<script type='text/javascript'>
+  (function() {
+    var baselocation = location.origin + '/';
+    if (location.href.indexOf("/26fin.com") !== -1) {
+      baselocation = location.href.slice(0, location.href.indexOf('/26fin.com')+10) + '/';
+    }
+    var tag = document.createElement('base');
+    tag.href = baselocation;
+    var firstScriptTag = document.getElementsByTagName('head')[0];
+    firstScriptTag.appendChild(tag);
+  }());
+</script>
