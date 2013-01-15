@@ -6604,7 +6604,7 @@ abbr {
     font-weight: bold;
     height: 70px;
     line-height: 70px;
-    padding: 14px 23.33333px 0;
+    padding: 10px 14px 0;
   }
   /* line 49, ../sass/_topbar.scss */
   .top-bar ul:not(.dropdown) > li:not(.name) {
@@ -6704,7 +6704,7 @@ abbr {
   }
   /* line 83, ../sass/_topbar.scss */
   .top-bar ul:not(.dropdown) > li.has-dropdown a {
-    padding-right: 52.5px;
+    padding-right: 35px;
   }
   /* line 84, ../sass/_topbar.scss */
   .top-bar ul:not(.dropdown) > li.has-dropdown a:after {
@@ -6714,8 +6714,8 @@ abbr {
     height: 0;
     border: solid 5px;
     border-color: #333333 transparent transparent transparent;
-    margin-right: 23.33333px;
-    margin-top: 14px;
+    margin-right: 17.5px;
+    margin-top: 11.66667px;
     position: absolute;
     right: 0;
     top: 50%;
