@@ -31,8 +31,8 @@
 // @import "foundation/components/grid";
 
 // Control which common styles get compiled
-
- @import "_typography";
+	@import "_typography";
+	@import "_mqueries";
 // @import "foundation/common/forms";
 
 // Control which components you get if customizing

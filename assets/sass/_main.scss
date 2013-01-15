@@ -2,5 +2,5 @@
 
 body {background: $bodyBkgImage;}
 
-#wrapper {background: white; float: left; border: $topBarListBorder; padding: 20px; margin-top: -1px; border-radius: 0 0 10px 10px; margin-bottom: $navBarHeight;
+#wrapper {background: white; float: left; margin-top: -1px; border-left: $topBarListBorder; border-right: $topBarListBorder; border-bottom: $topBarListBorder; padding: 20px; border-radius: 0 0 10px 10px; margin-bottom: $navBarHeight;
 }
