@@ -1,6 +1,9 @@
 # Ignore Aptana Project File #
 .project
 
+# Ignore Netbeans Project dir #
+nbproject
+
 # Ignore Compiled Site #
 _site/*
 .sass-cache

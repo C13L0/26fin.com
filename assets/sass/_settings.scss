@@ -84,7 +84,7 @@
 // $custFormDisabledBgColor: #ddd;
 
 // Main settings
-   $bodyBkgImage: url(/assets/images/debut_light.png) repeat scroll;
+   $bodyBkgImage: url(../images/debut_light.png) repeat scroll;
    $mainBorderRadius: 3px;
 
 // Tab Settings
@@ -100,10 +100,10 @@
    $navBarTextColor: #666666;
 
 // Top Bar Settings
-
+   $topBarNameBorder: 1px solid fff;
    $topBarBgColor: #fff;
    $topBarHeight: 70px;
-// $topBarHeightMobile: 45px;
+   $topBarHeightMobile: 70px;
 // $topBarBtmMargin: 30px;
 // $topBarTitleWeight: bold;
 // $topBarTitleSize: 17px;
@@ -119,8 +119,8 @@
    $topBarDropToggleAlpha: .5;
 // $topBarSearchWidth: 200px;
 // $topBarBreakPoint: 940px; // Change to 9999px for always mobile layout
-// $topBarNavToggleSize: 8px;
-
+// $topBarNavToggleSize: 15px;
+   $topBarDropBgColor: #f2f2f2;
 // UI Settings
 
 // $thumbRadius: 3px;
