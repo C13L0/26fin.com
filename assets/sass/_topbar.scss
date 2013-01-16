@@ -45,7 +45,7 @@
           &.name {border-right: $topBarListBorder; border-left: $topBarListBorder; padding: 5px auto 0;
             a {padding: $topBarHeight / 8 $topBarHeight / 3 0;}
           }
-          a:not(.button) {margin-bottom: -1px; color: $topBarLinkColor; display: block; font-size: $topBarLinkSize; font-weight: $topBarLinkWeight; height: $topBarHeight; line-height: $topBarHeight; padding: $topBarHeight / 5 $topBarHeight / 3 0; }
+          a:not(.button) {margin-bottom: -1px; color: $topBarLinkColor; display: block; font-size: $topBarLinkSize; font-weight: $topBarLinkWeight; height: $topBarHeight; line-height: $topBarHeight; padding: $topBarHeight / 7 $topBarHeight / 5 0; }
           &:not(.name) {border-right: $topBarListBorder; background: darken($topBarBgColor, 5%);
             &:hover, &.active, &:focus { background: darken($topBarBgColor, 15%);
               a { color: darken($topBarLinkColor, 15%);}
@@ -80,8 +80,8 @@
           /* li.has-dropdown */
           &.has-dropdown { position: relative;
             &:hover, &:focus { &>.dropdown { display: block; visibility: visible; } }
-            a { padding-right: $topBarHeight * .75;
-              &:after { @include cssTriangle($topBarDropToggleSize, $topBarDropToggleColor, top); margin-right: $topBarHeight / 3; margin-top: $topBarHeight / 5; position: absolute; right: 0; top: 50%; }
+            a { padding-right: $topBarHeight * .5;
+              &:after { @include cssTriangle($topBarDropToggleSize, $topBarDropToggleColor, top); margin-right: $topBarHeight / 4; margin-top: $topBarHeight / 6; position: absolute; right: 0; top: 50%; }
             }
             .dropdown { background: white; height: auto; left: 0; padding: 0; margin: 0; position: absolute; visibility: hidden; z-index: 99 !important; border: $topBarListBorder;
               li { background: white; line-height: $topBarDropLinkSize; min-width: 100%; border-bottom: $topBarListBorder; padding: 0;
