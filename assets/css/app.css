@@ -7248,5 +7248,52 @@ body {
 
 /* line 28, ../sass/_main.scss */
 .pricing-list-wrapper {
-  margin-top: 70px;
+  margin-top: 35px;
+}
+/* line 29, ../sass/_main.scss */
+.pricing-list-wrapper [class*="column"] + [class*="column"]:last-child {
+  float: left;
+}
+
+/* Pricing Table Override ---------------------- */
+/* line 34, ../sass/_main.scss */
+.special-column {
+  padding: 0;
+  margin-right: -15px;
+  margin-left: 20px;
+}
+/* line 35, ../sass/_main.scss */
+.special-column .pricing-table.exchange-info {
+  border: 0 none;
+}
+/* line 36, ../sass/_main.scss */
+.special-column .pricing-table.exchange-info * {
+  list-style: none;
+  line-height: 1;
+}
+/* line 37, ../sass/_main.scss */
+.special-column .pricing-table.exchange-info .title {
+  background-color: transparent;
+  padding: 15px 20px;
+  border-bottom: dotted 1px #dddddd;
+  text-align: right;
+  color: #333333;
+}
+/* line 38, ../sass/_main.scss */
+.special-column .pricing-table.exchange-info .price {
+  background-color: transparent;
+  padding: 15px 20px;
+  border-bottom: dotted 1px #dddddd;
+  text-align: right;
+  color: #333333;
+  font-weight: normal;
+  font-size: 20px;
+}
+/* line 39, ../sass/_main.scss */
+.special-column .pricing-table.exchange-info .description {
+  text-align: right;
+}
+/* line 40, ../sass/_main.scss */
+.special-column .pricing-table.exchange-info .bullet-item {
+  text-align: right;
 }
