@@ -7182,7 +7182,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   width: 40%;
   position: absolute;
   margin-left: 60%;
-  background: #f7f7f7;
+  background: #f8f9f9;
   height: 100%;
   border: 1px solid #ededed;
 }
@@ -7197,7 +7197,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   height: 125px;
   padding: 40px 25% 0;
   margin: 10px;
-  border: 1px solid fff;
+  border: 1px solid white;
 }
 
 /* Small Devices ------------ */
@@ -7244,4 +7244,9 @@ body {
   padding: 20px;
   border-radius: 0 0 10px 10px;
   margin-bottom: 40px;
+}
+
+/* line 28, ../sass/_main.scss */
+.pricing-list-wrapper {
+  margin-top: 70px;
 }
