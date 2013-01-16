@@ -3,7 +3,7 @@
 .orbit-slide {position: relative; height: 30%;
 	.slideshow-image {z-index: -10; width: 60%; max-width: 60%; position: absolute; }
 
-	.slideshow-content {max-width: 40%; width: 40%; position: absolute; margin-left: 60%; background: darken($white, 3%); height: 100%; border: 1px solid darken($white, 5%);
+	.slideshow-content {max-width: 40%; width: 40%; position: absolute; margin-left: 60%; background: darken($white, 3%); height: 100%; border: 1px solid darken($white, 7%);
 		.text-wrapper {padding: 10px;}
 		.button-wrapper {background: darken($white, 7%); display: block; height: 125px; padding: 40px 25% 0; margin: 10px; border: $topBarNameBorder; }
 	}

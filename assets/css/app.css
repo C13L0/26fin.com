@@ -7184,7 +7184,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   margin-left: 60%;
   background: #f7f7f7;
   height: 100%;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #ededed;
 }
 /* line 7, ../sass/_main.scss */
 .orbit-slide .slideshow-content .text-wrapper {
