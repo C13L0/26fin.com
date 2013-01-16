@@ -2,8 +2,7 @@
 TwoSixFin
 =========
 
-This is a small blog for TWO SIX Financial build on Jekyll Foundation Starter Kit including SASS
-=============================
+###This is a small site for TWO SIX Financial build on Jekyll Foundation Starter Kit including SASS
 
 ##Requirements
 1. [Jekyll](https://github.com/mojombo/jekyll) is installed on your computer
