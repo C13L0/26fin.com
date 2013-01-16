@@ -1,6 +1,28 @@
-/* Main Content */
 
-body {background: $bodyBkgImage;}
+/*Slideshow*/
+.orbit-slide {position: relative; height: 30%;
+	.slideshow-image {z-index: -10; width: 60%; max-width: 60%; position: absolute; }
 
-#wrapper {background: white; float: left; margin-top: -1px; border-left: $topBarListBorder; border-right: $topBarListBorder; border-bottom: $topBarListBorder; padding: 20px; border-radius: 0 0 10px 10px; margin-bottom: $navBarHeight;
+	.slideshow-content {max-width: 40%; width: 40%; position: absolute; margin-left: 60%; background: darken($white, 3%); height: 100%; border: 1px solid darken($white, 5%);
+		.text-wrapper {padding: 10px;}
+		.button-wrapper {background: darken($white, 7%); display: block; height: 125px; padding: 40px 25% 0; margin: 10px; border: $topBarNameBorder; }
+	}
 }
+ /* Small Devices ------------ */
+@media only screen and (max-width: $screenSmall - 1) {
+	.orbit-slide {
+		.slideshow-image {max-width: 100%; width: 100%; }
+
+		.slideshow-content {width: 100%; max-width: 100%; margin-left: 0; padding: 40px 20px; background: transparent none;
+			.text-wrapper {display: none;}
+			.button-wrapper {background: transparent none; width: 100%; height: 100%; padding: 0; border: 0 none;}
+		}
+	}
+}
+
+/* Main Content */
+body {background: $bodyBkgImage;}
+#wrapper {background: white; float: left; border-left: $topBarListBorder; border-right: $topBarListBorder; border-bottom: $topBarListBorder; padding: 20px; border-radius: 0 0 10px 10px; margin-bottom: $navBarHeight;
+}
+
+
