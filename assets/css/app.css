@@ -7333,6 +7333,15 @@ body {
   text-align: right;
 }
 
+.pricing-list-wrapper .tabs-content {
+  margin-bottom: 0px;
+}
+
+.subnote {
+  font-size:11px;
+  text-align: center;
+}
+
 @media only screen and (max-width: 767px) {
   /* line 57, ../sass/_main.scss */
   .special-column {
