@@ -1,42 +1,62 @@
-
-/*Slideshow*/
-.orbit-slide {position: relative; height: 30%;
-	.slideshow-image {z-index: -10; width: 60%; max-width: 60%; position: absolute; }
-
-	.slideshow-content {max-width: 40%; width: 40%; position: absolute; margin-left: 60%; background: #f8f9f9; height: 100%; border: 1px solid darken($white, 7%);
-		.text-wrapper {padding: 10px;}
-		.button-wrapper {background: darken($white, 7%); display: block; height: 125px; padding: 40px 25% 0; margin: 10px; border: 1px solid $white; }
-	}
-}
- /* Small Devices ------------ */
-@media only screen and (max-width: $screenSmall - 1) {
-	.orbit-slide {
-		.slideshow-image {max-width: 100%; width: 100%; }
-
-		.slideshow-content {width: 100%; max-width: 100%; margin-left: 0; padding: 40px 20px; background: transparent none;
-			.text-wrapper {display: none;}
-			.button-wrapper {background: transparent none; width: 100%; height: 100%; padding: 0; border: 0 none;}
-		}
-	}
-}
-
-/* Main Content */
+/* Main Content Layout*/
 body {background: $bodyBkgImage;}
 #wrapper {background: white; float: left; border-left: $topBarListBorder; border-right: $topBarListBorder; border-bottom: $topBarListBorder; padding: 20px; border-radius: 0 0 10px 10px; margin-bottom: $navBarHeight;
 }
 
+/*Slideshow*/
+#featuredContent {position: relative;
+	div {
+		.slideshow-image {height: 100%; width: 60%; max-width: 60%; position: absolute; border: solid darken($white, 7%); border-width: 1px 0 1px 1px;}
+
+		.slideshow-content {max-width: 40%; width: 40%; position: absolute; margin-left: 60%; background: #f8f9f9; height: 100%; border: 1px solid darken($white, 7%);
+			.text-wrapper {padding: 10px;}
+			.feature-wrapper {margin: 10px; background: darken($white, 7%); display: block; padding: 20px; border: 1px solid $white; 
+				.button {display: block; margin-left: auto; margin-right: auto;}
+			}
+			ul {padding: 20px; float: left;}
+		}
+		&.featured-content-layout2 {
+			.slideshow-image {margin-left: 40%; border-width: 1px 1px 1px 0;}
+			.slideshow-content {margin-left: 0;}
+			ul {float: right;}
+		}
+	}
+}
+ /* Small Devices ------------ */
+@media only screen and (max-width: $screenSmall - 1) {
+	#featuredContent {
+		div {
+			.slideshow-image {max-width: 100%; width: 100%; margin: 0; @include opacity(0.5);}
+
+			.slideshow-content {width: 100%; max-width: 100%; margin-left: 0; padding: 40px 20px; background: transparent none;
+				.text-wrapper {display: none;}
+				.feature-wrapper {background: transparent none; width: 100%; height: 100%; padding: 0; border: 0 none;
+					.button {margin: 0;}
+				}
+			}
+		}
+	}
+}
 .pricing-list-wrapper {margin-top: $topBarHeight / 2;
 	[class*="column"] + [class*="column"]:last-child {
 	float: left;
-	}}
+	}
+	/* Pricing Table Override ---------------------- */
+	.special-column {padding: 0; margin-right: -15px; margin-left: 20px;
+	  .pricing-table.exchange-info { border: 0 none;
+	    & * { list-style: none; line-height: 1; }
+	    .title { background-color: transparent; padding: $priceTitlePadding; border-bottom: $priceDescBtmBorder; text-align: $priceAltAlign; color: $priceTitleColor;}
+	    .price { background-color: transparent; padding: $priceMoneyPadding; border-bottom: $priceDescBtmBorder; text-align: $priceAltAlign; color: $priceMoneyColor; font-weight: $priceMoneyWeight; font-size: $priceMoneySize; }
+	    .description {text-align: $priceAltAlign;}
+	    .bullet-item {text-align: $priceAltAlign;}
+		}
+	}
+}
 
-/* Pricing Table Override ---------------------- */
-.special-column {padding: 0; margin-right: -15px; margin-left: 20px;
-  .pricing-table.exchange-info { border: 0 none;
-    & * { list-style: none; line-height: 1; }
-    .title { background-color: transparent; padding: $priceTitlePadding; border-bottom: $priceDescBtmBorder; text-align: $priceAltAlign; color: $priceTitleColor;}
-    .price { background-color: transparent; padding: $priceMoneyPadding; border-bottom: $priceDescBtmBorder; text-align: $priceAltAlign; color: $priceMoneyColor; font-weight: $priceMoneyWeight; font-size: $priceMoneySize; }
-    .description {text-align: $priceAltAlign;}
-    .bullet-item {text-align: $priceAltAlign;}
+@media only screen and (max-width: $screenSmall - 1) {
+	.special-column { display: none;
+	}
+	[class*="column"] + [class*="column"]:last-child {
+	float: none !important;
 	}
 }
