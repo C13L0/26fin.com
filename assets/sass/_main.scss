@@ -1,21 +1,35 @@
 
 /*Slideshow*/
-.orbit-slide {position: relative; height: 30%;
-	.slideshow-image {z-index: -10; width: 60%; max-width: 60%; position: absolute; }
+#featuredContent {position: relative;
+	div {
+		.slideshow-image {height: 100%; width: 60%; max-width: 60%; position: absolute; border: solid darken($white, 7%); border-width: 1px 0 1px 1px;}
 
-	.slideshow-content {max-width: 40%; width: 40%; position: absolute; margin-left: 60%; background: #f8f9f9; height: 100%; border: 1px solid darken($white, 7%);
-		.text-wrapper {padding: 10px;}
-		.button-wrapper {background: darken($white, 7%); display: block; height: 125px; padding: 40px 25% 0; margin: 10px; border: 1px solid $white; }
+		.slideshow-content {max-width: 40%; width: 40%; position: absolute; margin-left: 60%; background: #f8f9f9; height: 100%; border: 1px solid darken($white, 7%);
+			.text-wrapper {padding: 10px;}
+			.feature-wrapper {margin: 10px; background: darken($white, 7%); display: block; padding: 20px; border: 1px solid $white; 
+				.button {display: block; margin-left: auto; margin-right: auto;}
+			}
+			ul {padding: 20px; float: left;}
+		}
+		&.featured-content-layout2 {
+			.slideshow-image {margin-left: 40%; border-width: 1px 1px 1px 0;}
+			.slideshow-content {margin-left: 0;}
+			ul {float: right;}
+		}
 	}
 }
  /* Small Devices ------------ */
 @media only screen and (max-width: $screenSmall - 1) {
-	.orbit-slide {
-		.slideshow-image {max-width: 100%; width: 100%; }
+	#featuredContent {
+		div {
+			.slideshow-image {max-width: 100%; width: 100%; margin: 0; @include opacity(0.5);}
 
-		.slideshow-content {width: 100%; max-width: 100%; margin-left: 0; padding: 40px 20px; background: transparent none;
-			.text-wrapper {display: none;}
-			.button-wrapper {background: transparent none; width: 100%; height: 100%; padding: 0; border: 0 none;}
+			.slideshow-content {width: 100%; max-width: 100%; margin-left: 0; padding: 40px 20px; background: transparent none;
+				.text-wrapper {display: none;}
+				.feature-wrapper {background: transparent none; width: 100%; height: 100%; padding: 0; border: 0 none;
+					.button {margin: 0;}
+				}
+			}
 		}
 	}
 }
