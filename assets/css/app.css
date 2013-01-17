@@ -7291,26 +7291,22 @@ body {
   margin-top: 35px;
   /* Pricing Table Override ---------------------- */
 }
-/* line 44, ../sass/_main.scss */
-.pricing-list-wrapper [class*="column"] + [class*="column"]:last-child {
-  float: left;
-}
-/* line 48, ../sass/_main.scss */
+/* line 45, ../sass/_main.scss */
 .pricing-list-wrapper .special-column {
   padding: 0;
   margin-right: -15px;
   margin-left: 20px;
 }
-/* line 49, ../sass/_main.scss */
+/* line 46, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info {
   border: 0 none;
 }
-/* line 50, ../sass/_main.scss */
+/* line 47, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info * {
   list-style: none;
   line-height: 1;
 }
-/* line 51, ../sass/_main.scss */
+/* line 48, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .title {
   background-color: transparent;
   padding: 15px 20px;
@@ -7318,7 +7314,7 @@ body {
   text-align: right;
   color: #333333;
 }
-/* line 52, ../sass/_main.scss */
+/* line 49, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .price {
   background-color: transparent;
   padding: 15px 20px;
@@ -7328,23 +7324,18 @@ body {
   font-weight: normal;
   font-size: 20px;
 }
-/* line 53, ../sass/_main.scss */
+/* line 50, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .description {
   text-align: right;
 }
-/* line 54, ../sass/_main.scss */
+/* line 51, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .bullet-item {
   text-align: right;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 60, ../sass/_main.scss */
+  /* line 57, ../sass/_main.scss */
   .special-column {
     display: none;
-  }
-
-  /* line 62, ../sass/_main.scss */
-  [class*="column"] + [class*="column"]:last-child {
-    float: none !important;
   }
 }

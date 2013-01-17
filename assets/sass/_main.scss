@@ -41,9 +41,6 @@ body {background: $bodyBkgImage;}
 	}
 }
 .pricing-list-wrapper {margin-top: $topBarHeight / 2;
-	[class*="column"] + [class*="column"]:last-child {
-	float: left;
-	}
 	/* Pricing Table Override ---------------------- */
 	.special-column {padding: 0; margin-right: -15px; margin-left: 20px;
 	  .pricing-table.exchange-info { border: 0 none;
@@ -58,8 +55,5 @@ body {background: $bodyBkgImage;}
 
 @media only screen and (max-width: $screenSmall - 1) {
 	.special-column { display: none;
-	}
-	[class*="column"] + [class*="column"]:last-child {
-	float: none !important;
 	}
 }
