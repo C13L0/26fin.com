@@ -1,3 +1,7 @@
+/* Main Content Layout*/
+body {background: $bodyBkgImage;}
+#wrapper {background: white; float: left; border-left: $topBarListBorder; border-right: $topBarListBorder; border-bottom: $topBarListBorder; padding: 20px; border-radius: 0 0 10px 10px; margin-bottom: $navBarHeight;
+}
 
 /*Slideshow*/
 #featuredContent {position: relative;
@@ -33,24 +37,26 @@
 		}
 	}
 }
-
-/* Main Content */
-body {background: $bodyBkgImage;}
-#wrapper {background: white; float: left; border-left: $topBarListBorder; border-right: $topBarListBorder; border-bottom: $topBarListBorder; padding: 20px; border-radius: 0 0 10px 10px; margin-bottom: $navBarHeight;
-}
-
 .pricing-list-wrapper {margin-top: $topBarHeight / 2;
 	[class*="column"] + [class*="column"]:last-child {
 	float: left;
-	}}
+	}
+	/* Pricing Table Override ---------------------- */
+	.special-column {padding: 0; margin-right: -15px; margin-left: 20px;
+	  .pricing-table.exchange-info { border: 0 none;
+	    & * { list-style: none; line-height: 1; }
+	    .title { background-color: transparent; padding: $priceTitlePadding; border-bottom: $priceDescBtmBorder; text-align: $priceAltAlign; color: $priceTitleColor;}
+	    .price { background-color: transparent; padding: $priceMoneyPadding; border-bottom: $priceDescBtmBorder; text-align: $priceAltAlign; color: $priceMoneyColor; font-weight: $priceMoneyWeight; font-size: $priceMoneySize; }
+	    .description {text-align: $priceAltAlign;}
+	    .bullet-item {text-align: $priceAltAlign;}
+		}
+	}
+}
 
-/* Pricing Table Override ---------------------- */
-.special-column {padding: 0; margin-right: -15px; margin-left: 20px;
-  .pricing-table.exchange-info { border: 0 none;
-    & * { list-style: none; line-height: 1; }
-    .title { background-color: transparent; padding: $priceTitlePadding; border-bottom: $priceDescBtmBorder; text-align: $priceAltAlign; color: $priceTitleColor;}
-    .price { background-color: transparent; padding: $priceMoneyPadding; border-bottom: $priceDescBtmBorder; text-align: $priceAltAlign; color: $priceMoneyColor; font-weight: $priceMoneyWeight; font-size: $priceMoneySize; }
-    .description {text-align: $priceAltAlign;}
-    .bullet-item {text-align: $priceAltAlign;}
+@media only screen and (max-width: $screenSmall - 1) {
+	.special-column { display: none;
+	}
+	[class*="column"] + [class*="column"]:last-child {
+	float: none !important;
 	}
 }
