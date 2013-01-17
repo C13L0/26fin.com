@@ -25,14 +25,16 @@ body {background: $bodyBkgImage;}
  /* Small Devices ------------ */
 @media only screen and (max-width: $screenSmall - 1) {
 	#featuredContent {
-		div {
-			.slideshow-image {max-width: 100%; width: 100%; margin: 0; @include opacity(0.5);}
-
-			.slideshow-content {width: 100%; max-width: 100%; margin-left: 0; padding: 40px 20px; background: transparent none;
-				.text-wrapper {display: none;}
-				.feature-wrapper {background: transparent none; width: 100%; height: 100%; padding: 0; border: 0 none;
-					.button {margin: 0;}
+		div {			
+			.slideshow-image {max-width: 100%; width: 100% !important; margin-left: 0 !important; @include opacity(0.5);}
+			.slideshow-content {width: 100%; max-width: 100%; margin-left: 0; padding: 10px; background: transparent none;
+				.text-wrapper { padding: 0;
+					h4 {display: none ;}
 				}
+				.feature-wrapper {background: transparent none; padding: 0; border: 0 none;
+					.button {}
+				}
+				ul {display: none;}
 			}
 		}
 	}

@@ -7247,61 +7247,63 @@ body {
   /* line 29, ../sass/_main.scss */
   #featuredContent div .slideshow-image {
     max-width: 100%;
-    width: 100%;
-    margin: 0;
+    width: 100% !important;
+    margin-left: 0 !important;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
     opacity: 0.5;
   }
-  /* line 31, ../sass/_main.scss */
+  /* line 30, ../sass/_main.scss */
   #featuredContent div .slideshow-content {
     width: 100%;
     max-width: 100%;
     margin-left: 0;
-    padding: 40px 20px;
+    padding: 10px;
     background: transparent none;
+  }
+  /* line 31, ../sass/_main.scss */
+  #featuredContent div .slideshow-content .text-wrapper {
+    padding: 0;
   }
   /* line 32, ../sass/_main.scss */
-  #featuredContent div .slideshow-content .text-wrapper {
+  #featuredContent div .slideshow-content .text-wrapper h4 {
     display: none;
   }
-  /* line 33, ../sass/_main.scss */
+  /* line 34, ../sass/_main.scss */
   #featuredContent div .slideshow-content .feature-wrapper {
     background: transparent none;
-    width: 100%;
-    height: 100%;
     padding: 0;
     border: 0 none;
   }
-  /* line 34, ../sass/_main.scss */
-  #featuredContent div .slideshow-content .feature-wrapper .button {
-    margin: 0;
+  /* line 37, ../sass/_main.scss */
+  #featuredContent div .slideshow-content ul {
+    display: none;
   }
 }
-/* line 40, ../sass/_main.scss */
+/* line 42, ../sass/_main.scss */
 .pricing-list-wrapper {
   margin-top: 35px;
   /* Pricing Table Override ---------------------- */
 }
-/* line 41, ../sass/_main.scss */
+/* line 43, ../sass/_main.scss */
 .pricing-list-wrapper [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
-/* line 45, ../sass/_main.scss */
+/* line 47, ../sass/_main.scss */
 .pricing-list-wrapper .special-column {
   padding: 0;
   margin-right: -15px;
   margin-left: 20px;
 }
-/* line 46, ../sass/_main.scss */
+/* line 48, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info {
   border: 0 none;
 }
-/* line 47, ../sass/_main.scss */
+/* line 49, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info * {
   list-style: none;
   line-height: 1;
 }
-/* line 48, ../sass/_main.scss */
+/* line 50, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .title {
   background-color: transparent;
   padding: 15px 20px;
@@ -7309,7 +7311,7 @@ body {
   text-align: right;
   color: #333333;
 }
-/* line 49, ../sass/_main.scss */
+/* line 51, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .price {
   background-color: transparent;
   padding: 15px 20px;
@@ -7319,22 +7321,22 @@ body {
   font-weight: normal;
   font-size: 20px;
 }
-/* line 50, ../sass/_main.scss */
+/* line 52, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .description {
   text-align: right;
 }
-/* line 51, ../sass/_main.scss */
+/* line 53, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .bullet-item {
   text-align: right;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 57, ../sass/_main.scss */
+  /* line 59, ../sass/_main.scss */
   .special-column {
     display: none;
   }
 
-  /* line 59, ../sass/_main.scss */
+  /* line 61, ../sass/_main.scss */
   [class*="column"] + [class*="column"]:last-child {
     float: none !important;
   }
