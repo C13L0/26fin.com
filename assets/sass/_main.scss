@@ -1,11 +1,12 @@
 /* Main Content Layout*/
 body {background: $bodyBkgImage;}
-#wrapper {background: white; float: left; border-left: $topBarListBorder; border-right: $topBarListBorder; border-bottom: $topBarListBorder; padding: 20px; border-radius: 0 0 10px 10px; margin-bottom: $navBarHeight;
+#wrapper {padding: 20px; background: white; float: left; border-left: $topBarListBorder; border-right: $topBarListBorder; border-bottom: $topBarListBorder; border-radius: 0 0 10px 10px; margin-bottom: $navBarHeight;
 }
 
 /*Slideshow*/
-#featuredContent {position: relative;
-	div {
+#featuredContent {display: block; width: 930px; height: 330px; background: #000 url('../images/foundation/orbit/loading.gif') no-repeat center center; overflow: hidden;
+    >div { display: none; }
+	>div { background: $white;
 		.slideshow-image {height: 100%; width: 60%; max-width: 60%; position: absolute; border: solid darken($white, 7%); border-width: 1px 0 1px 1px;}
 
 		.slideshow-content {max-width: 40%; width: 40%; position: absolute; margin-left: 60%; background: #f8f9f9; height: 100%; border: 1px solid darken($white, 7%);
@@ -13,12 +14,12 @@ body {background: $bodyBkgImage;}
 			.feature-wrapper {margin: 10px; background: darken($white, 7%); display: block; padding: 20px; border: 1px solid $white; 
 				.button {display: block; margin-left: auto; margin-right: auto;}
 			}
-			ul {padding: 20px; float: left;}
+			ul {padding: 20px;}
 		}
 		&.featured-content-layout2 {
 			.slideshow-image {margin-left: 40%; border-width: 1px 1px 1px 0;}
 			.slideshow-content {margin-left: 0;}
-			ul {float: right;}
+			ul {}
 		}
 	}
 }

@@ -7171,12 +7171,12 @@ body {
 
 /* line 3, ../sass/_main.scss */
 #wrapper {
+  padding: 20px;
   background: white;
   float: left;
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
-  padding: 20px;
   border-radius: 0 0 10px 10px;
   margin-bottom: 40px;
 }
@@ -7184,10 +7184,22 @@ body {
 /*Slideshow*/
 /* line 7, ../sass/_main.scss */
 #featuredContent {
-  position: relative;
+  display: block;
+  width: 930px;
+  height: 330px;
+  background: black url("../images/foundation/orbit/loading.gif") no-repeat center center;
+  overflow: hidden;
+}
+/* line 8, ../sass/_main.scss */
+#featuredContent > div {
+  display: none;
 }
 /* line 9, ../sass/_main.scss */
-#featuredContent div .slideshow-image {
+#featuredContent > div {
+  background: white;
+}
+/* line 10, ../sass/_main.scss */
+#featuredContent > div .slideshow-image {
   height: 100%;
   width: 60%;
   max-width: 60%;
@@ -7195,8 +7207,8 @@ body {
   border: solid #ededed;
   border-width: 1px 0 1px 1px;
 }
-/* line 11, ../sass/_main.scss */
-#featuredContent div .slideshow-content {
+/* line 12, ../sass/_main.scss */
+#featuredContent > div .slideshow-content {
   max-width: 40%;
   width: 40%;
   position: absolute;
@@ -7205,46 +7217,41 @@ body {
   height: 100%;
   border: 1px solid #ededed;
 }
-/* line 12, ../sass/_main.scss */
-#featuredContent div .slideshow-content .text-wrapper {
+/* line 13, ../sass/_main.scss */
+#featuredContent > div .slideshow-content .text-wrapper {
   padding: 10px;
 }
-/* line 13, ../sass/_main.scss */
-#featuredContent div .slideshow-content .feature-wrapper {
+/* line 14, ../sass/_main.scss */
+#featuredContent > div .slideshow-content .feature-wrapper {
   margin: 10px;
   background: #ededed;
   display: block;
   padding: 20px;
   border: 1px solid white;
 }
-/* line 14, ../sass/_main.scss */
-#featuredContent div .slideshow-content .feature-wrapper .button {
+/* line 15, ../sass/_main.scss */
+#featuredContent > div .slideshow-content .feature-wrapper .button {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 16, ../sass/_main.scss */
-#featuredContent div .slideshow-content ul {
+/* line 17, ../sass/_main.scss */
+#featuredContent > div .slideshow-content ul {
   padding: 20px;
-  float: left;
 }
-/* line 19, ../sass/_main.scss */
-#featuredContent div.featured-content-layout2 .slideshow-image {
+/* line 20, ../sass/_main.scss */
+#featuredContent > div.featured-content-layout2 .slideshow-image {
   margin-left: 40%;
   border-width: 1px 1px 1px 0;
 }
-/* line 20, ../sass/_main.scss */
-#featuredContent div.featured-content-layout2 .slideshow-content {
-  margin-left: 0;
-}
 /* line 21, ../sass/_main.scss */
-#featuredContent div.featured-content-layout2 ul {
-  float: right;
+#featuredContent > div.featured-content-layout2 .slideshow-content {
+  margin-left: 0;
 }
 
 /* Small Devices ------------ */
 @media only screen and (max-width: 767px) {
-  /* line 29, ../sass/_main.scss */
+  /* line 30, ../sass/_main.scss */
   #featuredContent div .slideshow-image {
     max-width: 100%;
     width: 100% !important;
@@ -7252,7 +7259,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
     opacity: 0.5;
   }
-  /* line 30, ../sass/_main.scss */
+  /* line 31, ../sass/_main.scss */
   #featuredContent div .slideshow-content {
     width: 100%;
     max-width: 100%;
@@ -7260,50 +7267,50 @@ body {
     padding: 10px;
     background: transparent none;
   }
-  /* line 31, ../sass/_main.scss */
+  /* line 32, ../sass/_main.scss */
   #featuredContent div .slideshow-content .text-wrapper {
     padding: 0;
   }
-  /* line 32, ../sass/_main.scss */
+  /* line 33, ../sass/_main.scss */
   #featuredContent div .slideshow-content .text-wrapper h4 {
     display: none;
   }
-  /* line 34, ../sass/_main.scss */
+  /* line 35, ../sass/_main.scss */
   #featuredContent div .slideshow-content .feature-wrapper {
     background: transparent none;
     padding: 0;
     border: 0 none;
   }
-  /* line 37, ../sass/_main.scss */
+  /* line 38, ../sass/_main.scss */
   #featuredContent div .slideshow-content ul {
     display: none;
   }
 }
-/* line 42, ../sass/_main.scss */
+/* line 43, ../sass/_main.scss */
 .pricing-list-wrapper {
   margin-top: 35px;
   /* Pricing Table Override ---------------------- */
 }
-/* line 43, ../sass/_main.scss */
+/* line 44, ../sass/_main.scss */
 .pricing-list-wrapper [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
-/* line 47, ../sass/_main.scss */
+/* line 48, ../sass/_main.scss */
 .pricing-list-wrapper .special-column {
   padding: 0;
   margin-right: -15px;
   margin-left: 20px;
 }
-/* line 48, ../sass/_main.scss */
+/* line 49, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info {
   border: 0 none;
 }
-/* line 49, ../sass/_main.scss */
+/* line 50, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info * {
   list-style: none;
   line-height: 1;
 }
-/* line 50, ../sass/_main.scss */
+/* line 51, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .title {
   background-color: transparent;
   padding: 15px 20px;
@@ -7311,7 +7318,7 @@ body {
   text-align: right;
   color: #333333;
 }
-/* line 51, ../sass/_main.scss */
+/* line 52, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .price {
   background-color: transparent;
   padding: 15px 20px;
@@ -7321,22 +7328,22 @@ body {
   font-weight: normal;
   font-size: 20px;
 }
-/* line 52, ../sass/_main.scss */
+/* line 53, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .description {
   text-align: right;
 }
-/* line 53, ../sass/_main.scss */
+/* line 54, ../sass/_main.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .bullet-item {
   text-align: right;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 59, ../sass/_main.scss */
+  /* line 60, ../sass/_main.scss */
   .special-column {
     display: none;
   }
 
-  /* line 61, ../sass/_main.scss */
+  /* line 62, ../sass/_main.scss */
   [class*="column"] + [class*="column"]:last-child {
     float: none !important;
   }
