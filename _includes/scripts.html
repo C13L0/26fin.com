@@ -9,7 +9,9 @@
 <![endif]-->
 
 <script type='text/javascript'>
-  $(function() {
-    $('#featuredContent').orbit({ fluid: '16x6' });
+  jQuery(function() {
+    if (jQuery.fn.hasOwnProperty('orbit')) {
+      jQuery('#featuredContent').orbit({ fluid: '16x6' });
+    }
   });
 </script>
