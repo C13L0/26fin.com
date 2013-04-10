@@ -1,4 +1,4 @@
-@import "foundation/common/ratios";
+@import "ratios";
 
 // Settings file containing Foundation defaults
 
@@ -166,8 +166,8 @@
 // $priceMoneyPadding: 15px 20px;
 // $priceMoneyAlign: center;
 // $priceMoneyColor: #333;
-// $priceMoneyWeight: normal;
-// $priceMoneySize: 20px;
+ $priceMoneyWeight: bold;
+ $priceMoneySize: 15px;
 
 // $priceBgColor: #fff;
 // $priceDescColor: #777;

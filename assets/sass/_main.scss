@@ -23,6 +23,10 @@ body {background: $bodyBkgImage;}
 		}
 	}
 }
+
+.pricing-table {
+	.title {background: $mainColor; color: $white;}
+}
  /* Small Devices ------------ */
 @media only screen and (max-width: $screenSmall - 1) {
 	#featuredContent {
