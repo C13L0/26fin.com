@@ -1,5 +1,3 @@
-<script src="assets/js/foundation/jquery.js"></script>
-<script src="assets/js/foundation/foundation.min.js"></script>
 <script src="assets/js/foundation/app.js"></script>
 <script src="assets/js/foundation/modernizr.foundation.js"></script>
 
@@ -9,7 +7,9 @@
 <![endif]-->
 
 <script type='text/javascript'>
-  $(function() {
-    $('#featuredContent').orbit({ fluid: '16x6' });
+  jQuery(function() {
+    if (jQuery.fn.hasOwnProperty('orbit')) {
+      jQuery('#featuredContent').orbit({ fluid: '16x6' });
+    }
   });
 </script>
