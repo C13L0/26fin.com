@@ -1,0 +1,59 @@
+<div class="rates-block">
+	<div class="row">
+		<h3 class="columns">Ready to take advantage of our competitive rates? <a href="getstarted.html"> Get Started</a>.</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns row end">
+		<div class="six columns">
+			<h5>
+	    		<a href="business-solutions.html">Business Standards</a>
+	    	</h5>
+        	<ul>
+	        	{% for item in site.pages %}
+		            {% if item.group == 'products_services' %}
+		            	<li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
+		            {% endif %}
+		        {% endfor %}
+	    	</ul>
+	    	<h5>
+	    		<a href="industrystandards.html">Industry Standards</a>
+	    	</h5>
+	    	<h5>
+	    		<a href="getstarted.html">Get Started</a>
+	    	</h5>
+        	<ul>
+	        	{% for item in site.pages %}
+		            {% if item.group == 'get_started' %}
+		            	<li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
+		            {% endif %}
+		        {% endfor %}
+	    	</ul>
+        </div>
+		<div class="six columns">
+			<h5>
+	    		<a href="products-and-services.html">Products and Services</a>
+	    	</h5>
+			<ul>
+				{% for item in site.pages %}
+		            {% if item.group == 'business_solutions' %}
+		            	<li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
+		            {% endif %}
+		        {% endfor %}
+		    </ul>
+        </div>
+	</div>
+	<div class="six columns">
+	</div>
+</div>
+<div class="contact-block">
+	<div class="row">
+		<div class="ten columns">
+			<img src="assets/images/help-2-icon.png" class="left columns">
+			<div class="columns end">
+				<h3><a href="mailto:apps@26fin.com">Questions about an Application?</a> Contact Us.</h3>
+				<p><a href="mailto:apps@26fin.com">Send us an Email</a> or call 877-396-3748</p>
+			</div>
+		</div>
+	</div>
+</div>

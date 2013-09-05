@@ -10,26 +10,44 @@
     <meta name="viewport" content="width=device-width" />
 
     <title>{{ page.title }}</title>
-    <script src="assets/js/foundation/foundation.min.js"></script>
     {% include styles.html %}
-  </head>
-  <body>
-  <!-- Whole Body Div -->
-    <div class="row">
-      <div class="twelve columns centered">
-        {% include nav.html %}
-        <!-- Main page content -->
-        <div id="wrapper" class="twelve columns">
-          <h1>{{ site.tagline }}</h1>
-          {{ content }}
-        <!-- end wrapper -->
-        </div>
-        <!-- End Whole-Body Div -->
-      </div>
-    </div>
-    <!-- [JS Files] -->
+<!-- [JS Files] -->
     {% include scripts.html %}
+
+  </head>
+  <body style="padding-top: 50px;">
+    <header>
+      {% include nav.html %}
+    </header>
+    {% if page.slideshow %}
+      <section id="feature-hero-wrapper">
+        <div class="light-color-overlay">
+          <div class="row">
+            {% include slider.html %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+    {% if page.title-page == null %}
+      <section id="feature-hero-wrapper">
+        <div class="light-color-overlay">
+          <div class="row">
+            <img src="assets/images/{{ page.special_image }}" class="one columns">
+            <h2 class="white eleven columns section-title">{{ page.title }}</h2>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+    <div class="row">
+      <section id="main_content_wrapper"{% if page.two_col %} class="nine columns push-three" {% else %} class="twelve columns"{% endif %}>
+          {{ content }}
+      </section>
+      {% if page.two_col %}
+        {% include sidebar1.html %}
+      {% endif %}
+    </div>
+    <footer>
+      {% include footer.html %}
+    </footer>
   </body>
 </html>
-
-
