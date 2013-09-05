@@ -85,7 +85,7 @@
 
     &.callout { background: $standardAlertColor; color: $standardAlertTextColor; border-color: darken($standardAlertColor, 10%); @include box-shadow(inset 0px 1px 0px rgba(255,255,255,0.5));
       h5 {color: $standardAlertTextColor;}
-      a { color: #fff; }
+      a { color: $standardAlertTextColor; text-decoration: underline; }
       .button { background: $white; border: none; color: $mainColor; @include text-shadow(none);
 
         &:hover, &:focus { background: rgba(255,255,255,0.8); }

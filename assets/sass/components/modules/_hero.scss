@@ -1,9 +1,3 @@
-section#hero-wrapper {@include clearfix(); background: $darkGrey; background: url(../images/hero/homepage-hero-bg.png) no-repeat 50% -40px, url(../images/global/bg/low_contrast_linen_bg.png) repeat 0 0; margin-bottom: 0;
-  h1 {color: $white; text-shadow: 1px 1px #000; font-size: ms(7); margin: 70px 0 20px 0; line-height: 60px; text-align: center;}
-  p {color: $white; font-size: ms(1); margin-bottom: 40px; text-align: center;}
-  img {margin-top: 30px; margin-left: 25%; width: 50%;}
-}
-
 section#feature-hero-wrapper {background: url(../images/global/bg/low_contrast_linen_bg.png) repeat 0 0; position: relative;
   .img-hero-background {position: absolute; top:- 54px; z-index: -1;}
   h2 {color: white;}
@@ -22,14 +16,6 @@ section#feature-hero-wrapper {background: url(../images/global/bg/low_contrast_l
 /* Graphic effects for front page --------*/
 section#feature-hero-wrapper {z-index: -1; overflow: hidden;
   .light-color-overlay {z-index: 0;}
-}
-
-section#knowledge-hero-wrapper {background: url(../images/global/bg/low_contrast_linen_bg.png) repeat 0 0;
-  #knowledge-base-hero {
-    height: 126px; background: url("../images/knowledge/knowledge-base-hero-bg.png") no-repeat right center;
-    h1 {color: $white; font-size: ms(6); margin-top: 10px; margin-bottom: 0; line-height: 60px;}
-    h2 {color: $white; font-size: ms(4); margin: 0;}
-  }
 }
 
 @media only screen and (max-width: $screenSmall - 1) {
