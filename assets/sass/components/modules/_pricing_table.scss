@@ -1,0 +1,20 @@
+.pricing-table {
+	.title {background: $mainColor; color: $white; min-height: 62px;}
+}
+.pricing-list-wrapper {margin-top: $topBarHeight / 2;
+	/* Pricing Table Override ---------------------- */
+	.special-column {padding: 0; margin-right: -15px;
+	  .pricing-table.exchange-info { border: 0 none;
+	    & * { list-style: none; line-height: 1; }
+	    .title { background-color: transparent; padding: $priceTitlePadding; border-bottom: $priceDescBtmBorder; text-align: right; color: $priceTitleColor;}
+	    .price { background-color: transparent; padding: $priceMoneyPadding; border-bottom: $priceDescBtmBorder; text-align: right; color: $priceMoneyColor; font-weight: $priceMoneyWeight; font-size: 17px; }
+	    .description {text-align: right;}
+	    .bullet-item {text-align: right;}
+		}
+	}
+}
+
+@media only screen and (max-width: $screenSmall - 1) {
+	.special-column { display: none;
+	}
+}

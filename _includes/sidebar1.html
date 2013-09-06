@@ -1,25 +1,20 @@
 <div class="three columns pull-nine">
-      <ul class="nav-bar vertical left">
-        {% assign pages_list = site.pages %}
-        {% assign group = page.group %}
-        {% if page.dropdown %}
-        	{% assign group = page.dropdown %}
-        {% endif %}
-    	{% for node in pages_list %}
-    		{% assign should_include = false %}
-    		{% if page.dropdown != null and node.url == page.url %}
-    			{% assign should_include = true %}
-    		{% endif %}
-    		{% if node.dropdown == page.group %}
-    			{% assign should_include = true %}
-    		{% endif %}
-			{% if should_include %}
-				<li class="active">
-					<a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a>
-					<ul>{% include pages_list %}</ul>
-				</li>
-			{% endif %}
-    	{% endfor %}
-      </ul>
-    </div>
+    {% assign pages_list = site.pages %}
+    {% assign group = page.group %}
+    {% if page.dropdown %}
+    	{% assign group = page.dropdown %}
+    {% endif %}
+	{% for node in pages_list %}
+		{% assign should_include = false %}
+		{% if page.dropdown != null and node.url == page.url %}
+			{% assign should_include = true %}
+		{% endif %}
+		{% if node.dropdown == page.group %}
+			{% assign should_include = true %}
+		{% endif %}
+		{% if should_include %}
+			<h4 class="secondary"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></h4>
+			<ul class="nav-bar vertical left">{% include pages_list %}</ul>
+		{% endif %}
+	{% endfor %}
   </div>
