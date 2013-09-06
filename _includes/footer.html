@@ -7,41 +7,41 @@
 	<div class="six columns row end">
 		<div class="six columns">
 			<h5>
-	    		<a href="business-solutions.html">Business Solutions</a>
-	    	</h5>
-        	<ul>
-	        	{% for item in site.pages %}
-		            {% if item.group == 'products_services' %}
-		            	<li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
-		            {% endif %}
-		        {% endfor %}
-	    	</ul>
-	    	<h5>
-	    		<a href="industrystandards.html">Industry Standards</a>
-	    	</h5>
-	    	<h5>
-	    		<a href="getstarted.html">Get Started</a>
-	    	</h5>
-        	<ul>
-	        	{% for item in site.pages %}
-		            {% if item.group == 'get_started' %}
-		            	<li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
-		            {% endif %}
-		        {% endfor %}
-	    	</ul>
-        </div>
-		<div class="six columns">
-			<h5>
-	    		<a href="business-solutions.html">Business Solutions</a>
-	    	</h5>
+				<a href="products-and-services.html">Products and Services</a>
+			</h5>
 			<ul>
 				{% for item in site.pages %}
-		            {% if item.group == 'business_solutions' %}
-		            	<li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
-		            {% endif %}
-		        {% endfor %}
-		    </ul>
-        </div>
+					{% if item.group == 'products_services' %}
+						<li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+			<h5>
+				<a href="industrystandards.html">Industry Standards</a>
+			</h5>
+			<h5>
+				<a href="getstarted.html">Get Started</a>
+			</h5>
+			<ul>
+				{% for item in site.pages %}
+					{% if item.group == 'get_started' %}
+						<li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="six columns">
+			<h5>
+				<a href="business-solutions.html">Business Solutions</a>
+			</h5>
+			<ul>
+				{% for item in site.pages %}
+					{% if item.group == 'business_solutions' %}
+						<li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 	<div class="six columns">
 		<div class="three right">
