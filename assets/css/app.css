@@ -6094,76 +6094,55 @@ table.hide-for-medium {
 /* line 1, ../sass/components/modules/_hero.scss */
 section#feature-hero-wrapper {
   background: url(../images/global/bg/low_contrast_linen_bg.png) repeat 0 0;
-  position: relative;
-}
-/* line 2, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper .img-hero-background {
-  position: absolute;
-  top: -54px;
-  z-index: -1;
 }
 /* line 3, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper h2 {
-  color: white;
+section#feature-hero-wrapper #featuredContent .img-hero-background {
+  padding: 0;
+  margin: -25px 0;
 }
 /* line 4, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper h2:not(.section-title) {
-  margin-top: 26px;
+section#feature-hero-wrapper #featuredContent h2 {
+  color: white;
 }
 /* line 5, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper h2, section#feature-hero-wrapper h3 {
+section#feature-hero-wrapper #featuredContent h2:not(.section-title) {
+  margin-top: 26px;
+  line-height: 40px;
+}
+/* line 6, ../sass/components/modules/_hero.scss */
+section#feature-hero-wrapper #featuredContent h2, section#feature-hero-wrapper #featuredContent h3 {
   font-weight: 600;
   letter-spacing: 1px;
   text-shadow: 1px 1px black;
 }
-/* line 6, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper img {
+/* line 7, ../sass/components/modules/_hero.scss */
+section#feature-hero-wrapper #featuredContent img {
   margin-top: 5px;
   padding-right: 5px;
 }
-/* line 7, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper a.button {
-  margin-top: 20px;
-}
 /* line 8, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper ul li {
-  font-weight: bold;
-  text-shadow: 1px 1px black;
-}
-/* line 9, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper #feature-hero {
-  min-height: 126px;
-}
-/* line 11, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper #feature-hero h1 {
-  color: white;
-  font-size: 71px;
-  margin-top: 20px;
-  line-height: 60px;
-}
-/* line 12, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper #feature-hero h2 {
-  color: white;
-  font-size: 27px;
-}
-/* line 13, ../sass/components/modules/_hero.scss */
-section#feature-hero-wrapper #feature-hero img {
-  margin-top: 20px;
+section#feature-hero-wrapper #featuredContent a.button {
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 /* Graphic effects for front page --------*/
-/* line 17, ../sass/components/modules/_hero.scss */
+/* line 12, ../sass/components/modules/_hero.scss */
 section#feature-hero-wrapper {
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
 }
-/* line 18, ../sass/components/modules/_hero.scss */
+/* line 13, ../sass/components/modules/_hero.scss */
 section#feature-hero-wrapper .light-color-overlay {
   z-index: 0;
 }
+/* line 14, ../sass/components/modules/_hero.scss */
+section#feature-hero-wrapper .light-color-overlay #featuredContent {
+  z-index: 1;
+}
 
 @media only screen and (max-width: 767px) {
-  /* line 22, ../sass/components/modules/_hero.scss */
+  /* line 19, ../sass/components/modules/_hero.scss */
   section#hero-wrapper {
     *zoom: 1;
     background: #474747;
@@ -6180,7 +6159,7 @@ section#feature-hero-wrapper .light-color-overlay {
   section#hero-wrapper:after {
     clear: both;
   }
-  /* line 23, ../sass/components/modules/_hero.scss */
+  /* line 20, ../sass/components/modules/_hero.scss */
   section#hero-wrapper h1 {
     color: white;
     text-shadow: 1px 1px black;
@@ -6189,14 +6168,14 @@ section#feature-hero-wrapper .light-color-overlay {
     line-height: 60px;
     text-align: center;
   }
-  /* line 24, ../sass/components/modules/_hero.scss */
+  /* line 21, ../sass/components/modules/_hero.scss */
   section#hero-wrapper p {
     color: white;
     font-size: 17px;
     margin-bottom: 0;
     text-align: left;
   }
-  /* line 25, ../sass/components/modules/_hero.scss */
+  /* line 22, ../sass/components/modules/_hero.scss */
   section#hero-wrapper img {
     margin: 0;
     width: 100%;

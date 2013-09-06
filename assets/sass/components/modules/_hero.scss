@@ -1,21 +1,18 @@
-section#feature-hero-wrapper {background: url(../images/global/bg/low_contrast_linen_bg.png) repeat 0 0; position: relative;
-  .img-hero-background {position: absolute; top:- 54px; z-index: -1;}
-  h2 {color: white;}
-  h2:not(.section-title) {margin-top: 26px;}
-  h2, h3 {font-weight: 600; letter-spacing: 1px; text-shadow: 1px 1px $black;}
-  img {margin-top: 5px; padding-right: 5px;}
-  a.button {margin-top: 20px;}
-  ul li {font-weight: bold; text-shadow: 1px 1px $black;}
-  #feature-hero {
-    min-height: 126px;
-    h1 {color: $white; font-size: ms(7); margin-top: 20px;  line-height: 60px;}
-    h2 {color: $white; font-size: ms(3);}
-    img {margin-top: 20px;}
+section#feature-hero-wrapper {background: url(../images/global/bg/low_contrast_linen_bg.png) repeat 0 0;
+  #featuredContent {
+    .img-hero-background {padding:0; margin: -25px 0;}
+    h2 {color: white;}
+    h2:not(.section-title) {margin-top: 26px; line-height: 40px;}
+    h2, h3 {font-weight: 600; letter-spacing: 1px; text-shadow: 1px 1px $black;}
+    img {margin-top: 5px; padding-right: 5px;}
+    a.button {margin-top: 15px; margin-bottom: 30px;}
   }
 }
 /* Graphic effects for front page --------*/
-section#feature-hero-wrapper {z-index: -1; overflow: hidden;
-  .light-color-overlay {z-index: 0;}
+section#feature-hero-wrapper {z-index: -2; overflow: hidden;
+  .light-color-overlay {z-index: 0; 
+    #featuredContent {z-index: 1;}
+  }
 }
 
 @media only screen and (max-width: $screenSmall - 1) {
