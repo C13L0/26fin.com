@@ -1,0 +1,88 @@
+  .nav-bar { height: $navBarHeight; background: lighten($black, 30%); margin-left: 0; margin-top: $navBarHeight / 2; padding: 0;
+
+    &>li { float: $defaultOpposite; display: block; position: relative; padding: 0; margin: 0; border: 1px solid lighten($black, 20%); border-#{$defaultOpposite}: 1px solid lighten($black, 20%); line-height: $navBarHeight - 2; @include box-shadow(1px 0 0 fade-out($shinyEdge, .3) inset);
+
+      &:first-child { @include box-shadow(0 0 0); }
+      &:last-child { border-#{$defaultOpposite}: solid 1px lighten($black, 20%); @include box-shadow(1px 0 0 fade-out($shinyEdge, .3) inset, 1px 0 0 fade-out($shinyEdge, .3)); }
+
+      &.active { background: $mainColor;
+        &>a:not(.flyout-toggle) { color: $white; font-weight: bold; cursor: default;}
+        &:hover { background: darken($mainColor, 20%); cursor: default; }
+      }
+      &:hover {background: darken($mainColor, 20%);
+        a {color: $white;}
+      }
+
+      &>a { color: $white; font-weight: bold; 
+        &:hover {color: $white;}
+      }
+      ul { margin-bottom: 0; }
+      .flyout { display: none; }
+
+      &.has-flyout {
+        &>a:first-child { padding-#{$defaultOpposite}: $navBarHeight; position: relative;
+          &:after { @include cssTriangle(4px, darken($white, 10%), top); position: absolute; #{$defaultOpposite}: $navBarHeight / 2; top: ($navBarHeight / 2) - 3; }
+        }
+        &>a.flyout-toggle { border-#{$defaultFloat}: 0 !important; position: absolute; #{$defaultOpposite}: 0; top: 0; padding: ($navBarHeight / 2); z-index: 2; display: block; }
+        &.is-touch {
+          &>a:first-child { padding-#{$defaultOpposite}: 55px;}
+          &>a.flyout-toggle { border-#{$defaultFloat}: 1px dashed #666; }
+        }
+      }
+    }
+
+    &>li>a:first-child { position: relative; padding: 0 ($navBarHeight / 2); display: block; text-decoration: none; font-size: ms(0); }
+    &>li>input { margin: 0 10px; }
+
+    &.vertical { height: auto; margin-top: 0;
+
+      &>li { float: none; border-bottom: none; border-#{$defaultOpposite}: solid 1px lighten($black, 20%); @include box-shadow(none);
+
+        &.has-flyout>a:first-child:after { @include cssTriangle(4px, darken($white, 10%), $defaultFloat); }
+        .flyout { #{$defaultFloat}: 100%; top: -1px;
+          &.right { #{$defaultFloat}: auto; #{$defaultOpposite}: 100%; }
+        }
+        &.active { border-#{$defaultOpposite}: solid 1px darken($mainColor, 10%); }
+        &:last-child { border-bottom: solid 1px lighten($black, 20%);}
+      }
+    }
+
+  }
+
+  .flyout { background: lighten($secondaryColor, 20%); padding: $navBarHeight / 2; margin: 0; border: 1px solid darken($white, 15%); position: absolute; top: $navBarHeight - 1; #{$defaultFloat}: -1px; width: $navFlyoutBaseWidth; z-index: 40; @include box-shadow(0 1px 5px rgba(#000, .1));
+
+    p { line-height: 1.2; font-size: ms(0) - 1; color: $white;}
+    *:first-child { margin-top: 0; } /* remove margin on any first-child element */
+    *:last-child { margin-bottom: 0; } /* remove margin on last element */
+
+    &.small { width: $navFlyoutBaseWidth / 1.5; }
+    &.large { width: $navFlyoutBaseWidth * 1.75; }
+
+    &.right { left: auto; right: -2px; }
+    &.left { right: auto; left: -2px; }
+    &.up { top: auto; bottom: $navBarHeight - 1; }
+
+  }
+
+  ul.flyout, .nav-bar li ul { padding: 0; list-style: none;
+
+    li { border-#{$defaultFloat}: 0 none; border: 0 none;
+      a { background: lighten($secondaryColor, 20%); border: 0 none; color: $white; display: block; font-size: ms(0); height: auto; line-height: 1; padding: ($navBarHeight / 4); @include box-shadow(0 0 0);
+        &:hover, &:focus { background: lighten($secondaryColor, 10%); color: $mainColor; }
+      }
+      &.active { margin-top: 0; border-top: 1px solid lighten($black, 30%); border-#{$defaultFloat}: 4px solid lighten($black, 10%);
+        a { background: lighten($black, 30%); border: none; color: #fff; height: auto; margin: 0; position: static; top: 0; @include box-shadow(0 0 0); }
+      }
+    }
+  }
+  header {
+    section {background: transparent;}
+    .contain-to-grid {z-index: 999; @include simpleGradient(#323232); @include slight_dropshadow(#515151); padding: 0; border-bottom: 1px solid #414040;}
+  }
+  @media only screen and (max-width: $screenSmall - 1) {
+    .top-bar {background: transparent;
+      section { min-height: inherit;
+        ul.right {background: black; margin-top: 0;}
+      }
+    }
+  }
