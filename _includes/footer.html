@@ -12,7 +12,7 @@
 			<ul>
 				{% for item in site.pages %}
 					{% if item.group == 'products_services' %}
-						<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+						<li><a href="{{ site.url }}{{ item.url | replace_first:'/','' }}">{{ item.title }}</a></li>
 					{% endif %}
 				{% endfor %}
 			</ul>
@@ -25,7 +25,7 @@
 			<ul>
 				{% for item in site.pages %}
 					{% if item.group == 'get_started' %}
-						<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+						<li><a href="{{ site.url }}{{ item.url  | replace_first:'/','' }}">{{ item.title }}</a></li>
 					{% endif %}
 				{% endfor %}
 			</ul>
@@ -37,7 +37,7 @@
 			<ul>
 				{% for item in site.pages %}
 					{% if item.group == 'business_solutions' %}
-						<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+						<li><a href="{{ site.url }}{{ item.url | replace_first:'/','' }}">{{ item.title }}</a></li>
 					{% endif %}
 				{% endfor %}
 			</ul>
