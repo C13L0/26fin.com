@@ -6068,6 +6068,7 @@ table.hide-for-medium {
 }
 /* line 10, ../sass/components/modules/_pricing_table.scss */
 .pricing-list-wrapper .special-column .pricing-table.exchange-info .price {
+  height: 51px;
   background-color: transparent;
   padding: 15px 20px;
   border-bottom: dotted 1px #dddddd;
