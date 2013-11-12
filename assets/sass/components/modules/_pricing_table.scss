@@ -7,7 +7,7 @@
 	  .pricing-table.exchange-info { border: 0 none;
 	    & * { list-style: none; line-height: 1; }
 	    .title { background-color: transparent; padding: $priceTitlePadding; border-bottom: $priceDescBtmBorder; text-align: right; color: $priceTitleColor;}
-	    .price { background-color: transparent; padding: $priceMoneyPadding; border-bottom: $priceDescBtmBorder; text-align: right; color: $priceMoneyColor; font-weight: $priceMoneyWeight; font-size: 17px; }
+	    .price { height: 51px; background-color: transparent; padding: $priceMoneyPadding; border-bottom: $priceDescBtmBorder; text-align: right; color: $priceMoneyColor; font-weight: $priceMoneyWeight; font-size: 17px; }
 	    .description {text-align: right;}
 	    .bullet-item {text-align: right;}
 		}
